@@ -1,0 +1,55 @@
+//Sleep hours per night
+const getSleepHours = (day) => {
+  switch (day) {
+    case 'monday':
+    return 8;
+    case 'tuesday':
+    return 7;
+    case 'wednesday':
+    return 6;
+    case 'thursday':
+    return 5;
+    case 'friday':
+    return 2;
+    case 'saturday':
+    return 11;
+    case 'sunday':
+    return 10;
+    break;
+  } 
+}
+
+//Sleep hours total ACTUAL
+const getActualSleepHours = () => 
+  getSleepHours('monday') +
+  getSleepHours('tuesday') +
+  getSleepHours('wednesday') +
+  getSleepHours('thursday') +
+  getSleepHours('friday') +
+  getSleepHours('saturday') +
+  getSleepHours('sunday');
+
+
+
+//Ideal sleep hours
+const getIdealSleepHours = () => {
+  var idealHours = 7;
+  return idealHours * 7;
+}
+
+//calculating debt of sleep
+const calculateSleepDebt = () => {
+  var actualSleepHours = getActualSleepHours();
+  var idealSleepHours = getIdealSleepHours();
+
+  if (actualSleepHours === idealSleepHours) {
+    console.log('You got the perfect amount of sleep!');
+  } else if (actualSleepHours < idealSleepHours) {
+    console.log('You didn\'t get enough sleep! You slept ' + (idealSleepHours -  actualSleepHours) + ' hours too short!');
+  } else if (actualSleepHours > idealSleepHours) {
+    console.log('You slept ' + (actualSleepHours - idealSleepHours) + ' hours too much!');
+  } else {
+    console.log('Error');
+  }
+}
+calculateSleepDebt();
