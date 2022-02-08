@@ -1,0 +1,20 @@
+//setting kelvin to 293 degree
+const kelvin = 0;
+console.log(kelvin);
+
+//setting celsius to 20 degree
+const celsius = kelvin - 273;
+console.log(celsius);
+
+//calculating fahrenheit
+var fahrenheit = celsius * (9/5) + 32;
+console.log(fahrenheit);
+
+//rounding down
+fahrenheit = Math.floor(fahrenheit);
+console.log(fahrenheit);
+
+//output
+console.log(`The temperature is ${fahrenheit} degrees Fahrenheit`);
+console.log(`The temperature is ${kelvin} degrees Kelvin`);
+console.log(`The temperature is ${celsius} degrees Celsius`);
