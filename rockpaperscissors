@@ -59,7 +59,7 @@ const determineWinner = (userChoice, computerChoice) => {
   }
 };
 const playGame = () => {
-  var userChoice = getUserChoice('nks');
+  var userChoice = getUserChoice('rock');
   var computerChoice = getComputerChoice();
   console.log(userChoice);
   console.log(computerChoice);
